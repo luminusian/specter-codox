@@ -9,5 +9,7 @@
   :main ^:skip-aot specter-codox.core
   :target-path "target/%s"
   :codox {:language :clojurescript}
-  :plugins [[lein-codox "0.10.3"]]
+  :plugins [[lein-codox "0.10.3"]
+            [lein-cljsbuild "1.1.6"]]
+  :cljsbuild {:builds [{:source-paths ["src"]}]}
   :profiles {:uberjar {:aot :all}})
